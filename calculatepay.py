@@ -1,3 +1,12 @@
+# create the function computepay
+def computepay(x,y):
+	if x > 40:
+		ot = (x-40)*1.5
+		pay = ot * y + 40 * y
+	else:
+		pay = x	* y
+	return pay
+#ask user for input
 hrs = raw_input('Enter Hours: ')
 try:
     h = float(hrs)
@@ -10,9 +19,6 @@ try:
 except:
     print "Please enter a numeric value."	
     exit()
-if h > 40:
-    ot = (h-40)*1.5
-    pay = ot * r + 40 * r
-else:
-    pay = h	* r
-print pay
+# run the function	
+print computepay(h,r)
+
