@@ -9,18 +9,23 @@
 ## If the user enters a value out of range, print a suitable error message and exit. 
 ## For the test, enter a score of 0.85
 gradestring = raw_input("Please enter a grade between 0 and 1: ")
-grade = float(gradestring)
-if grade >1:
-    print "Please enter a grade within the proper range"
-elif grade >= 0.9:
-    print "A"
-elif grade >= 0.8:
-    print "B"
-elif grade >= 0.7:
-    print "C"
-elif grade >= 0.6:
-    print "D"
-elif grade >= 0:
-   print "F"
-else:   
-    print "Please enter a grade within the proper range"
+try: 
+	grade = float(gradestring)
+except:
+    print "Bad Score"
+def computegrade(x):
+    if x >1:
+        return "Bad Score"
+    elif x >= 0.9:
+        return "A"
+    elif x >= 0.8:
+        return "B"
+    elif x >= 0.7:
+        return "C"
+    elif x >= 0.6:
+        return "D"
+    elif x >= 0:
+        return "F"
+    else:   
+        return "Bad Score"
+print computegrade(grade)		
