@@ -11,13 +11,14 @@ while True:
     try:
         num = int(entnum)
     except:
-        print ("Please enter a numeric value")
+        print ("Invalid input")
     if largestnumber == None:
         largestnumber = num
-    elif smallestnumber == None:
+    if smallestnumber == None:
         smallestnumber = num
-    elif num > largestnumber:
+    if num > largestnumber:
         largestnumber = num
-    elif num < smallestnumber:
+    if num < smallestnumber:
         smallestnumber = num
-print (largestnumber, smallestnumber)  
+print "Maximum is", largestnumber
+print "Minimum is", smallestnumber
