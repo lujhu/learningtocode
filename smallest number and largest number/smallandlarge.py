@@ -18,6 +18,6 @@ while True:
         smallestnumber = num
     elif num > largestnumber:
         largestnumber = num
-    elif smallestnumber < num:
+    elif num < smallestnumber:
         smallestnumber = num
 print (largestnumber, smallestnumber)  
